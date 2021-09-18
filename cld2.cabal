@@ -45,7 +45,7 @@ source-repository head
         location: https://github.com/dfoxfranke/haskell-cld2.git
 
 library
-        ghc-options: -Wall
+        ghc-options: -Wall -optc-w
         c-sources: cbits/cld2_generated_cjk_compatible.cc,
                    cbits/cld2_generated_deltaocta0122.cc,
                    cbits/cld2_generated_distinctocta0122.cc,
@@ -71,7 +71,7 @@ library
                    cbits/scoreonescriptspan.cc,
                    cbits/tote.cc,
                    cbits/utf8statetable.cc
-        cc-options: -std=c++98 -Wno-narrowing
+        cc-options: -w -std=c++98
         extra-libraries: stdc++
         exposed-modules: Text.CLD2
         build-depends: base ==4.*,
